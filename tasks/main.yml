@@ -15,25 +15,25 @@
     line: 8021q
 - name: Insert/Update vlan in /etc/network/interfaces
   template:
-    src: templates/templates_etc-network-interface.j2
+    src: templates/tmp_etc_network_interface.j2
     dest: /etc/network/interfaces
   notify:
     - restart_isc_dhcp_server
-- name: Update vlan in /etc/default/isc-dhcp-server
+- name: Update vlan in /etc/default/isc_dhcp-server
   template:
-    src: templates/templates_etc-dhcp-dhcpd.j2
+    src: templates/tmp_etc_default_isc_dhcp_server.j2
     dest: /etc/default/isc-dhcp-server
   notify:
     - restart_isc_dhcp_server
 - name: Update vlan in /etc/dhcpcd.conf
   template:
-    src: templates/templates_etc-dhcpcd.j2
+    src: templates/tmp_etc_dhcpcd_conf.j2
     dest: /etc/dhcpcd.conf
   notify:
     - restart_isc_dhcp_server
 - name: Update subnet in /etc/dhcp/dhcpd.conf
   template:
-    src: templates/templates_etc-subnet.j2
+    src: templates/tmp_etc_dhcp_dhcpd_conf.j2
     dest: /etc/dhcp/dhcpd.conf
   notify:
     - restart_isc_dhcp_server
