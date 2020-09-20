@@ -10,7 +10,6 @@ galaxy_info:
     - dhcp
     - dhcpd
     - isc
-    - isc-dhcp-server
     - server
     - interfaces
     - vlans
