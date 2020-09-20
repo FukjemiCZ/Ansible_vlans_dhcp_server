@@ -1,6 +1,5 @@
 ---
 dependencies: []
-
 galaxy_info:
   role_name: 'isc_dhcp_server_interfaces'
   author: 'FukjemiCZ'
@@ -17,4 +16,3 @@ galaxy_info:
     - name: Raspberry Pi OS
       versions:
         - wheezy
-  
