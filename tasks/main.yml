@@ -1,13 +1,14 @@
 ---
 - name: Install package
   apt:
-    name: isc-dhcp-server
-    name: vlan
+    name: 
+    - isc-dhcp-server
+    - vlan
 - name: Add the 802.1q module
   modprobe:
     name: 8021q
     state: present
-  - name: add line 8021q to /etc/modules
+- name: add line 8021q to /etc/modules
   lineinfile:
     path: /etc/modules
     regexp: '^8021q'
