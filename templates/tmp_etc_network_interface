@@ -4,4 +4,3 @@ iface {{ ansible_default_ipv4.interface }}.{{ item.vlan }} inet manual
   vlan-raw-device {{ ansible_default_ipv4.interface }}
 
 {% endfor %}
-
