@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: 'isc_dhcp_server_interfaces'
+  role_name: 'isc_dhcp_server'
   author: 'FukjemiCZ'
   description: 'Setup and manage ISC DHCP Server for Interfaces'
   license: 'MIT'
@@ -11,10 +11,12 @@ galaxy_info:
     - dhcp
     - dhcpd
     - isc
+    - isc-dhcp-server
     - server
     - interfaces
+    - vlans
   platforms:
-    - name: Raspberry Pi OS
+    - name: Debian
       versions:
-        - wheezy
+        - stretch
   
