@@ -1,0 +1,20 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: 'isc_dhcp_server_interfaces'
+  author: 'FukjemiCZ'
+  description: 'Setup and manage ISC DHCP Server for Interfaces'
+  license: 'MIT'
+  min_ansible_version: '2.6.0'
+  galaxy_tags:
+    - dhcp
+    - dhcpd
+    - isc
+    - server
+    - interfaces
+  platforms:
+    - name: Raspberry Pi OS
+      versions:
+        - wheezy
+  

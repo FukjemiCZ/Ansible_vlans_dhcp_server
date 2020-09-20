@@ -1,0 +1,41 @@
+vlans:
+  - interface: eth0
+    dhcp_server_address: 192.168.0.2/24
+    routers: 192.168.0.1
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+subnet:
+  - network: 192.168.1.0
+    parrent_interface: eth0
+    netmask: 255.255.255.0
+    broadcast: 192.168.1.255
+    routers: 192.168.1.1
+    dhcp_server_address: 192.168.1.2/24
+    vlan: 100
+    domain: "mysite.local"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    range:
+      - "192.168.1.10 192.168.1.100"
+    get_lease_hostnames: "true"
+    use_host_decl_names: "true"
+    default_lease_time: 600
+    max_lease_time: 7200
+  - network: 192.168.2.0
+    netmask: 255.255.255.0
+    broadcast: 192.168.2.255
+    routers: 192.168.2.1
+    dhcp_server_address: 192.168.2.2/24
+    vlan: 200
+    domain: "site.local"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    range:
+      - "192.168.2.10 192.168.2.30"
+    get_lease_hostnames: "true"
+    use_host_decl_names: "true"
+    default_lease_time: 600
+    max_lease_time: 7200

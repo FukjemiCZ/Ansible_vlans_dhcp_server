@@ -1,0 +1,18 @@
+{% for item in subnet %}
+subnet {{item.network}} netmask {{ item.netmask }} {
+        option routers {{ item.routers }};
+{% if item.broadcast is defined %}        option broadcast-address {{ item.broadcast }};
+{% endif %}
+        option subnet-mask {{ item.netmask }};
+        option domain-name-servers {% for hit in item.dns %}{{ hit }}{%- if not loop.last %}, {% endif -%}{% endfor %};
+{% if item.domain is defined %}        option domain-name "{{ item.domain }}";
+{% endif %}
+        get-lease-hostnames {{ item.get_lease_hostnames }};
+        use-host-decl-names {{ item.use_host_decl_names }};
+        default-lease-time {{ item.default_lease_time }};
+        max-lease-time {{ item.max_lease_time }};
+        pool {
+{% for hit in item.range %}                range {{ hit }};
+{% endfor %}        }
+}
+{% endfor %}
