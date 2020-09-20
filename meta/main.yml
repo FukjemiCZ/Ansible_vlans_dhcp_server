@@ -1,6 +1,5 @@
 ---
 dependencies: []
-
 galaxy_info:
   role_name: 'isc_dhcp_server'
   author: 'FukjemiCZ'
@@ -18,5 +17,9 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
+<<<<<<< HEAD
         - stretch
   
+=======
+        - wheezy
+>>>>>>> 5e92977cdebfd72c9a41b96808d3288e7380a1c8
