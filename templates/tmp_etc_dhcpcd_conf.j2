@@ -55,7 +55,7 @@ static domain_name_servers=
 {% endfor %}
 {% for item in subnet %}
 
-interface {% if item.parrent_interface is defined %}{{ item.parrent_interface }}.{{ item.vlan }}{% else %}{{ ansible_default_ipv4.i>
+interface {% if item.parrent_interface is defined %}{{ item.parrent_interface }}.{{ item.vlan }}{% else %}{{ ansible_default_ipv4.interface>
 
 static ip_address={{ item.dhcp_server_address }}
 static routers={{ item.routers }}
