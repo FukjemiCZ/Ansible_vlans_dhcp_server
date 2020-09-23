@@ -47,15 +47,15 @@ interface {{ ite.interface }}
 static ip_address={{ ite.dhcp_server_address }}
 static routers={{ite.routers}}
 static domain_name_servers=
-{%- for hit in ite.dns -%}
-{{ hit }}
+{%- for hitt in ite.dns -%}
+{{ hitt }}
 {%- if not loop.last %} {% endif -%}
 {%- endfor %}
 
 {% endfor %}
 {% for item in subnet %}
 
-interface {% if item.parrent_interface is defined %}{{ item.parrent_interface }}.{{ item.vlan }}{% else %}{{ ansible_default_ipv4.interface>
+interface {% if item.parrent_interface is defined %}{{ item.parrent_interface }}.{{ item.vlan }}{% else %}{{ ansible_default_ipv4.interface }}{% endif %}}
 
 static ip_address={{ item.dhcp_server_address }}
 static routers={{ item.routers }}
