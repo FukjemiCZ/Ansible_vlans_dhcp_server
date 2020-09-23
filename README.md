@@ -4,7 +4,7 @@ Example:
 subnet 192.168.0.0/24 Disable DHCP server vlan untaged
 subnet 192.168.1.0/24 Enabled DHCP server tagged 100
 subnet 192.168.2.0/24 Enabled DHCP server tagged 200
-
+```
 - name: "Install and Confugarition DHCP_server_"
   hosts: DHCP_servers
   become: true
@@ -53,3 +53,4 @@ subnet 192.168.2.0/24 Enabled DHCP server tagged 200
         use_host_decl_names: "true"
         default_lease_time: 600
         max_lease_time: 7200
+```
